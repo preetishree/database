@@ -22,7 +22,9 @@
     // Query the database
     //
     function queryDB(tx) {
+      alert(3);
         tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+        alert(4);
     }
 
     // Query the success callback
@@ -48,8 +50,10 @@
     // Transaction success callback
     //
     function successCB() {
+      alert(1);
         var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
         db.transaction(queryDB, errorCB);
+        alert(2);
     }
 
     // PhoneGap is ready
