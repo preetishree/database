@@ -34,6 +34,7 @@
         for (var i=0; i<len; i++){
             console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
             det=det+"Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data+"\n";
+            alert(det);
         }
         document.getElementById('details').innerHTML=det;
     }
